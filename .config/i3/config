@@ -129,6 +129,14 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# force certain apps to certain workspaces
+assign [class="Tilix"] $ws1
+assign [class="Firefox"] $ws2
+assign [class="TelegramDesktop"] $ws3
+assign [class="Nemo"] $ws4
+assign [class="Sublime_text"] $ws5
+assign [class="vlc"] $w6
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
