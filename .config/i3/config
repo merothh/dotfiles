@@ -160,8 +160,10 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-
 bindsym $mod+r mode "resize"
+
+# i3-lock
+bindsym $mod+shift+x exec "i3lock --c $i3-lock-color"
 
 # assign colors that i use across the config
 set $bg-color            #222D32
