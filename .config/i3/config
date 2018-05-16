@@ -157,7 +157,7 @@ assign [class="Firefox"] $ws2
 assign [class="TelegramDesktop"] $ws3
 assign [class="Nemo"] $ws4
 assign [class="Sublime_text"] $ws5
-assign [class="vlc"] $w6
+assign [class="vlc"] $ws6
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
