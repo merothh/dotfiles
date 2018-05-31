@@ -1,0 +1,10 @@
+!Colors and stuff
+URxvt*background: #151718
+URxvt*foreground: #d6d6d6
+URxvt*cursorColor: #d6d6d6
+
+!Fonts
+URxvt.font: xft:Overpass Mono:size=10
+
+!Scrollbar stuff
+URxvt.scrollBar: false
