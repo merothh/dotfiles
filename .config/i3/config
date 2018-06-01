@@ -153,7 +153,9 @@ bindsym $mod+Shift+Mod2+KP_Insert move container to workspace $ws10
 
 # force certain apps to certain workspaces
 assign [class="Tilix"] $ws1
+assign [class="URxvt"] $ws1
 assign [class="Firefox"] $ws2
+assign [class="Google-chrome"] $ws2
 assign [class="TelegramDesktop"] $ws3
 assign [class="Nemo"] $ws4
 assign [class="Sublime_text"] $ws5
