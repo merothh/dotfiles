@@ -8,3 +8,22 @@ URxvt.font: xft:Overpass Mono:size=10
 
 !Scrollbar stuff
 URxvt.scrollBar: false
+
+
+
+
+
+!Extensions
+URxvt.perl-ext-common: default,matcher,url-select,keyboard-select
+
+!! keyboard-select:
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+
+!! matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+!! url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
