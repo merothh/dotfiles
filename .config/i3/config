@@ -119,7 +119,7 @@ bindsym $mod+0 workspace $ws10
 # use numpad keys (num lock on)
 bindsym $mod+Mod2+KP_1 workspace $ws1
 bindsym $mod+Mod2+KP_2 workspace $ws2
-bindsym $mod+Mod2KP_3 workspace $ws3
+bindsym $mod+Mod2+KP_3 workspace $ws3
 bindsym $mod+Mod2+KP_4 workspace $ws4
 bindsym $mod+Mod2+KP_5 workspace $ws5
 bindsym $mod+Mod2+KP_6 workspace $ws6
