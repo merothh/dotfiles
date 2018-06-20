@@ -116,7 +116,7 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
-# use numpad keys as well
+# use numpad keys (num lock on)
 bindsym $mod+Mod2+KP_1 workspace $ws1
 bindsym $mod+Mod2+KP_2 workspace $ws2
 bindsym $mod+Mod2KP_3 workspace $ws3
@@ -127,6 +127,17 @@ bindsym $mod+Mod2+KP_7 workspace $ws7
 bindsym $mod+Mod2+KP_8 workspace $ws8
 bindsym $mod+Mod2+KP_9 workspace $ws9
 bindsym $mod+Mod2+KP_0 workspace $ws10
+# use numpad keys (num lock off)
+bindsym $mod+KP_End workspace $ws1
+bindsym $mod+KP_Down workspace $ws2
+bindsym $mod+KP_Next workspace $ws3
+bindsym $mod+KP_Left workspace $ws4
+bindsym $mod+KP_Begin workspace $ws5
+bindsym $mod+KP_Right workspace $ws6
+bindsym $mod+KP_Home workspace $ws7
+bindsym $mod+KP_Up workspace $ws8
+bindsym $mod+KP_Prior workspace $ws9
+bindsym $mod+KP_Insert workspace $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -139,7 +150,7 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
-# use numpad keys as well
+# use numpad keys (num lock on)
 bindsym $mod+Shift+Mod2+KP_End move container to workspace $ws1
 bindsym $mod+Shift+Mod2+KP_Down move container to workspace $ws2
 bindsym $mod+Shift+Mod2+KP_Next move container to workspace $ws3
@@ -150,6 +161,17 @@ bindsym $mod+Shift+Mod2+KP_Home move container to workspace $ws7
 bindsym $mod+Shift+Mod2+KP_Up move container to workspace $ws8
 bindsym $mod+Shift+Mod2+KP_Prior move container to workspace $ws9
 bindsym $mod+Shift+Mod2+KP_Insert move container to workspace $ws10
+# use numpad keys (num lock off)
+bindsym $mod+Shift+KP_1 move container to workspace $ws1
+bindsym $mod+Shift+KP_2 move container to workspace $ws2
+bindsym $mod+Shift+KP_3 move container to workspace $ws3
+bindsym $mod+Shift+KP_4 move container to workspace $ws4
+bindsym $mod+Shift+KP_5 move container to workspace $ws5
+bindsym $mod+Shift+KP_6 move container to workspace $ws6
+bindsym $mod+Shift+KP_7 move container to workspace $ws7
+bindsym $mod+Shift+KP_8 move container to workspace $ws8
+bindsym $mod+Shift+KP_9 move container to workspace $ws9
+bindsym $mod+Shift+KP_0 move container to workspace $ws10
 
 # force certain apps to certain workspaces
 assign [class="Tilix"] $ws1
