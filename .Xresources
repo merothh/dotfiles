@@ -16,7 +16,7 @@ urxvt.saveLines: 999999999
 
 
 !Extensions
-URxvt.perl-ext-common: default,matcher,url-select,keyboard-select
+URxvt.perl-ext-common: default,keyboard-select,matcher,selection-to-clipboard,url-select
 
 !! keyboard-select:
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
