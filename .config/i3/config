@@ -182,6 +182,7 @@ assign [class="Google-chrome"] $ws2
 
 assign [class="TelegramDesktop"] $ws3
 
+assign [class="Nautilus"] $ws4
 assign [class="Nemo"] $ws4
 assign [class="Pcmanfm"] $ws4
 
