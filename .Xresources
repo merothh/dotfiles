@@ -10,7 +10,7 @@ URxvt.font: xft:Overpass Mono:size=10
 URxvt.scrollBar: false
 
 !Larger history limit
-urxvt.saveLines: 999999999
+urxvt.saveLines: 999999
 
 
 
