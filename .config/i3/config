@@ -190,6 +190,11 @@ assign [class="Sublime_text"] $ws5
 
 assign [class="vlc"] $ws6
 
+# Open specific applications in floating mode
+for_window [class="Cinnamon-settings.py"] floating enable border normal
+for_window [class="Lxappearance"] floating enable sticky enable border normal
+for_window [class="Pavucontrol"] floating enable
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
