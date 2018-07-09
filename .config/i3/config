@@ -228,7 +228,10 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#set a custom wallpaper
+# disable focus follwing the damn mouse
+focus_follows_mouse no
+
+# set a custom wallpaper
 exec_always "feh --bg-scale /home/merothh/Pictures/wallpaper.jpg"
 
 # i3-lock
