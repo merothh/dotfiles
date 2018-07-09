@@ -230,7 +230,7 @@ exec_always "feh --bg-scale /home/merothh/Pictures/wallpaper.jpg"
 bindsym $mod+shift+x exec "i3lock --c $i3-lock-color"
 
 # screenshot key
-bindsym Print exec "gnome-screenshot"
+bindsym Print exec scrot --release ~/Pictures/Screenshots/Screenshot-%Y-%m-%d-%H-%M-%S.png
 
 # assign colors that i use across the config
 set $bg-color            #222D32
