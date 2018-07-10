@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xbacklight -get | cut -d. -f1 | awk '{print $0"%"}'
