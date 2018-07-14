@@ -185,6 +185,7 @@ assign [class="TelegramDesktop"] $ws3
 assign [class="Nautilus"] $ws4
 assign [class="Nemo"] $ws4
 assign [class="Pcmanfm"] $ws4
+assign [class="Thunar"] $ws4
 
 assign [class="Sublime_text"] $ws5
 
