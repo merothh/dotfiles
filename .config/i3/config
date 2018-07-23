@@ -232,6 +232,10 @@ bindsym $mod+r mode "resize"
 # Run polkit-gnome-authentication-agent-1 for polkit
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
 
+# Swap Caps Lock key with ESC key
+exec_always xmodmap -e "clear lock" #disable caps lock switch
+exec_always xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
+
 # disable focus follwing the damn mouse
 focus_follows_mouse no
 
