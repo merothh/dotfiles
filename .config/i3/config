@@ -261,6 +261,9 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# Enable Two Finger Scrolling on my Touchpad
+exec_always xinput --set-prop 14 "Synaptics Two-Finger Scrolling" 1 1 
+
 # assign colors that i use across the config
 set $bg-color            #222D32
 set $inactive-bg-color   #222D32
