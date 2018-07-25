@@ -15,3 +15,8 @@ clone this repo & run the setup.sh script
 
 Symlinks are created so that apps can find the dotfiles and they will update on a ``git
 pull``
+
+Screenshot
+-----------
+
+![Screenshot 1](https://i.imgur.com/vwOPN63.png)
