@@ -4,7 +4,11 @@ URxvt*foreground: #d6d6d6
 URxvt*cursorColor: #d6d6d6
 
 !Fonts
-URxvt.font: xft:Overpass Mono:size=10
+#define termfont xft:Inconsolata for Powerline:size=12
+URxvt.font:           termfont
+URxvt.boldFont:       termfont
+URxvt.italicFont:     termfont
+URxvt.boldItalicFont: termfont
 
 !Scrollbar stuff
 URxvt.scrollBar: false
