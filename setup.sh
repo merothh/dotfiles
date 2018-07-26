@@ -13,6 +13,7 @@ case $release in
 
 		#make sure directories are present
 		mkdir -p ~/{.fonts,.config}
+		mkdir -p ~/Pictures/Screenshots
 
 		#symlink all the goodies
 		ln -s ~/dotfiles/.config/i3/ ~/.config/i3 
