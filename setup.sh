@@ -2,13 +2,14 @@
 
 cyan='tput setaf 6'
 yellow='tput setaf 3'
+reset='tput sgr0'
 
 release=$(head /etc/os-release -n 1 | cut -d '"' -f 2)
 
 case $release in 
 	"Arch Linux"|"Antergos Linux"|"Manjaro Linux")
 
-		echo -e "\n$($cyan)Installing required packages"
+		echo -e "\n$($cyan)Installing required packages$($reset)\n"
 		sudo pacman -Sy i3-wm i3blocks i3lock dmenu scrot alsa-utils sysstat acpi feh playerctl xorg-xbacklight rxvt-unicode urxvt-perls adapta-gtk-theme papirus-icon-theme lxappearance
 
 		#cleanup leftovers
@@ -24,10 +25,10 @@ case $release in
 		ln -s ~/dotfiles/.fonts/Inconsolata-for-Powerline ~/.fonts/Inconsolata-for-Powerline
 		ln -s ~/dotfiles/.Xresources ~/.Xresources
 
-		echo -e "\n$($cyan)All done. Make sure to set themes and fonts using $($yellow)lxappearance $($cyan)after logging into i3wm"
+		echo -e "\n$($cyan)All done. Make sure to set themes and fonts using $($yellow)lxappearance $($cyan)after logging into i3wm\n"
 	;;
 	*)
-		echo -e "\n$($cyan)woops. you're not running an Arch based distro"
+		echo -e "\n$($cyan)woops. you're not running an Arch based distro\n"
 	;;
 
 esac
