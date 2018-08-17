@@ -32,6 +32,11 @@ case $release in
 		ln -s ~/dotfiles/.config/i3/ ~/.config/i3 
 		ln -s ~/dotfiles/.fonts/Font-Awesome/ ~/.fonts/Font-Awesome
 		ln -s ~/dotfiles/.fonts/Inconsolata-for-Powerline ~/.fonts/Inconsolata-for-Powerline
+
+		echo -e "\n$($cyan)Backing up any previous $($yellow).Xresources $($cyan)& symlinking new one$($reset)\n"
+		if [ -f ~/.Xresources ]; then
+			mv ~/.Xresources ~/.Xresources.old
+		fi
 		ln -s ~/dotfiles/.Xresources ~/.Xresources
 
 		#setup zsh & oh-my-zsh
@@ -52,7 +57,7 @@ case $release in
 			ln -s ~/dotfiles/.zshrc ~/.zshrc
 		fi
 
-		echo -e "\n$($cyan)All done. Make sure to \n	1.Set themes and fonts using $($yellow)lxappearance $($cyan)after logging into i3wm\n	2. Maybe move useful code from $($yellow).zshrc.old $($cyan)or $($yellow).bashrc"
+		echo -e "\n$($cyan)All done. Make sure to \n	1.Set themes and fonts using $($yellow)lxappearance $($cyan)after logging into i3wm\n	2. Maybe move useful code from $($yellow).zshrc.old $($cyan)or $($yellow).bashrc\n	$($cyan)3.Keep your old $($yellow).Xresources.old $($cyan)tucked off somewhere"
 	;;
 	*)
 		echo -e "\n$($cyan)woops. you're not running an Arch based distro\n"
