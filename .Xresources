@@ -56,6 +56,10 @@ URxvt.boldItalicFont: xft:Inconsolata for Powerline:bold:italic:size=12:antialia
 !Scrollbar stuff
 URxvt.scrollBar: false
 
+!Transparency
+URxvt.depth: 32
+URxvt.background: [95]#002b36
+
 !Larger history limit
 urxvt.saveLines: 999999
 

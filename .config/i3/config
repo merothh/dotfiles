@@ -239,6 +239,9 @@ exec_always xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
 # disable focus follwing the damn mouse
 focus_follows_mouse no
 
+# keep the screen compositor running always for transparency
+exec_always compton
+
 # set a custom wallpaper
 exec_always "feh --bg-scale ~/.config/i3/wallpaper.jpg"
 
