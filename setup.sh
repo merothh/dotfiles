@@ -12,7 +12,7 @@ read zsh
 case $release in 
 	"Arch Linux"|"Antergos Linux"|"Manjaro Linux")
 
-		packages+=" i3-wm i3blocks i3lock dmenu scrot alsa-utils sysstat acpi feh playerctl xorg-xbacklight rxvt-unicode urxvt-perls adapta-gtk-theme adwaita-icon-theme papirus-icon-theme lxappearance"
+		packages+=" i3-wm i3blocks i3lock rofi scrot alsa-utils sysstat acpi feh playerctl xorg-xbacklight rxvt-unicode urxvt-perls adapta-gtk-theme adwaita-icon-theme papirus-icon-theme lxappearance"
 
 		echo -e "\n$($cyan)// Installing required packages$($reset)\n"
 		sudo pacman -S $packages
@@ -36,7 +36,7 @@ case $release in
 		sudo add-apt-repository ppa:papirus/papirus
 		sudo add-apt-repository ppa:tista/adapta
 
-		packages+=" i3-wm i3blocks i3lock suckless-tools scrot alsa-utils sysstat acpi feh xbacklight rxvt-unicode adapta-gtk-theme adwaita-icon-theme-full papirus-icon-theme lxappearance"
+		packages+=" i3-wm i3blocks i3lock rofi scrot alsa-utils sysstat acpi feh xbacklight rxvt-unicode adapta-gtk-theme adwaita-icon-theme-full papirus-icon-theme lxappearance"
 
 		echo -e "\n$($cyan)// Installing required packages$($reset)\n"
 		sudo apt install $packages

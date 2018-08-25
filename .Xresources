@@ -1,4 +1,7 @@
-!Colors and stuff
+!!!!!!!!!!!!!!!!!!!!!!
+!! Colors and stuff !!
+!!!!!!!!!!!!!!!!!!!!!!
+
 !sourced from http://github.com/altercation/solarized
 
 *background: #002b36
@@ -40,6 +43,10 @@
 *color7: #eee8d5
 *color15: #fdf6e3
 
+!!!!!!!!!!!
+!! URxvt !!
+!!!!!!!!!!!
+
 !Fonts
 URxvt.font: xft:Inconsolata for Powerline:size=12:antialias=true:hinting=true,xft:dejavu sans mono:size=10:antialias=true:hinting=true
 URxvt.boldFont: xft:Inconsolata for Powerline:bold:size=12:antialias=true:hinting=true,xft:dejavu sans mono:bold:size=10:antialias=true:hinting=true
@@ -51,9 +58,6 @@ URxvt.scrollBar: false
 
 !Larger history limit
 urxvt.saveLines: 999999
-
-
-
 
 !Extensions
 URxvt.perl-ext-common: default,keyboard-select,matcher,selection-to-clipboard,url-select
@@ -69,3 +73,25 @@ URxvt.matcher.button: 1
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
+
+!!!!!!!!!!
+!! rofi !!
+!!!!!!!!!!
+
+rofi.font: Inconsolata for Powerline 12
+rofi.padding: 20
+rofi.line-padding: 2
+rofi.modi: combi
+rofi.combi-modi: drun,run
+rofi.show-icons: true
+rofi.drun-icon-theme: Papirus-Adapta-Nokto
+rofi.color-enabled: true
+rofi.hide-scrollbar: true
+rofi.separator-style: solid
+
+! State:           'bg',          'fg',    'bgalt',       'hlbg',        'hlfg'
+rofi.color-normal: #222D32,       #919ba0, #222D32,       #a4a4a4,       #222D32
+rofi.color-urgent: argb:00000000, #f43753, argb:00000000, argb:00000000, #e29a49
+rofi.color-active: argb:00000000, #49bbfb, argb:00000000, argb:00000000, #e29a49
+!                  'background',      'border',    'separator'
+rofi.color-window: #222D32,           #919ba0,     #222D32
