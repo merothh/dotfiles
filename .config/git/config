@@ -1,0 +1,12 @@
+#
+# This is the config file, and
+# a '#' or ';' character indicates
+# a comment
+#
+
+[core]
+	editor = vim
+
+[user]
+	name = merothh
+	email = merothh@gmail.com

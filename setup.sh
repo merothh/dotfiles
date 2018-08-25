@@ -58,7 +58,7 @@ case $release in
 esac
 
 #cleanup leftovers
-rm -rf ~/.config/i3 ~/{.i3} ~/.fonts/{Font-Awesome,Inconsolata-for-Powerline}
+rm -rf ~/.config/{i3,git} ~/{.i3} ~/.fonts/{Font-Awesome,Inconsolata-for-Powerline}
 
 #make sure directories are present
 mkdir -p ~/{.fonts,.config}
@@ -66,6 +66,7 @@ mkdir -p ~/Pictures/Screenshots
 
 #symlink all the goodies
 ln -s ~/dotfiles/.config/i3/ ~/.config/i3
+ln -s ~/dotfiles/.config/git ~/.config/git
 ln -s ~/dotfiles/.fonts/Font-Awesome/ ~/.fonts/Font-Awesome
 ln -s ~/dotfiles/.fonts/Inconsolata-for-Powerline ~/.fonts/Inconsolata-for-Powerline
 
