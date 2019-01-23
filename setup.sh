@@ -12,24 +12,34 @@ read zsh
 case $release in 
 	"Arch Linux"|"Antergos Linux"|"Manjaro Linux")
 
-		packages+=" i3-wm i3blocks i3lock rofi compton scrot alsa-utils sysstat acpi feh playerctl xorg-xbacklight rxvt-unicode urxvt-perls adapta-gtk-theme adwaita-icon-theme papirus-icon-theme lxappearance"
+		packages+=" i3-wm i3blocks i3lock rofi compton lsb-release scrot alsa-utils sysstat acpi feh playerctl xorg-xbacklight rxvt-unicode urxvt-perls adapta-gtk-theme adwaita-icon-theme papirus-icon-theme lxappearance"
 
 		echo -e "\n$($cyan)// Installing required packages$($reset)\n"
 		sudo pacman -S $packages
 
-		#build oh-my-zsh-git
+		echo -e "\n$($cyan)// Installing AUR packages$($reset)\n"
+		aur_packages="polybar ttf-comfortaa"
+		aur_dependencies="git base-devel"
+
 		if [ "$zsh" = "y" ]; then
 
-			echo -e "\n$($cyan)Installing dependencies for building $(yellow) oh-my-zsh-git$($reset)\n"
-			sudo pacman -S zsh git base-devel
+			aur_packages+=" oh-my-zsh-git"
+			aur_dependencies+=" zsh"
+		fi
 
-			echo -e "\n$($cyan)// Cloning & Building $($yellow)oh-my-zsh-git$($reset)\n"
-			git clone https://aur.archlinux.org/oh-my-zsh-git .build
+		echo -e "\n$($cyan)Installing dependencies for building $($yellow) AUR packages $($reset)\n"
+		sudo pacman -S $aur_dependencies
+
+		echo -e "\n$($cyan)// Cloning & Building $($yellow)AUR packages$($reset)\n"
+		for aur_package in $aur_packages
+		do
+			echo -e "\n$($yellow)$aur_package$($reset)\n"
+			git clone https://aur.archlinux.org/$aur_package .build
 			cd .build && makepkg -si
 			cd ../
 			rm -rf .build
+		done
 
-		fi
 	;;
 	"Ubuntu")
 		echo -e "\n$($cyan)// Adding PPA for $($yellow) adapta-gtk-theme $($cyan) && $($yellow) papirus-icon-theme$($reset)\n"
@@ -58,17 +68,21 @@ case $release in
 esac
 
 #cleanup leftovers
-rm -rf ~/.config/{i3,git} ~/{.i3} ~/.fonts/{Font-Awesome,Inconsolata-for-Powerline}
+rm -rf ~/.config/{i3,git,polybar,rofi,termite} ~/{.i3} ~/.fonts/{Font-Awesome,Inconsolata-for-Powerline}
 
 #make sure directories are present
 mkdir -p ~/{.fonts,.config}
 mkdir -p ~/Pictures/Screenshots
 
 #symlink all the goodies
-ln -s ~/dotfiles/.config/i3/ ~/.config/i3
+ln -s ~/dotfiles/.config/i3 ~/.config/i3
 ln -s ~/dotfiles/.config/git ~/.config/git
-ln -s ~/dotfiles/.fonts/Font-Awesome/ ~/.fonts/Font-Awesome
+ln -s ~/dotfiles/.config/polybar ~/.config/polybar
+ln -s ~/dotfiles/.config/rofi ~/.config/rofi
+ln -s ~/dotfiles/.config/termite ~/.config/termite
+ln -s ~/dotfiles/.fonts/Font-Awesome ~/.fonts/Font-Awesome
 ln -s ~/dotfiles/.fonts/Inconsolata-for-Powerline ~/.fonts/Inconsolata-for-Powerline
+ln -s ~/dotfiles/.fonts/Ubuntu-Nerd-Font-Complete ~/.fonts/Ubuntu-Nerd-Font-Complete
 
 echo -e "\n$($cyan)// Backing up any previous $($yellow).Xresources $($cyan)& symlinking new one$($reset)\n"
 if [ -f ~/.Xresources ]; then
@@ -88,4 +102,4 @@ if [ "$zsh" = "y" ]; then
 	chsh -s $(which zsh)
 fi
 
-echo -e "\n$($cyan)// All done. Make sure to \n	1.Set themes and fonts using $($yellow)lxappearance $($cyan)after logging into i3wm\n	2.Log out and back in for $($yellow)zsh $($cyan)to kick in\n	3.Maybe move useful code from $($yellow).zshrc.pre-oh-my-zsh $($cyan)or $($yellow).bashrc\n	$($cyan)4.Keep your old $($yellow).bashrc .zshrc.pre-oh-my-zsh .Xresources.old $($cyan)tucked off somewhere"
+echo -e "\n$($cyan)// All done. Make sure to \n	1.Set themes and fonts using $($yellow)lxappearance $($cyan)after logging into i3wm\n	2.Log out and back in for $($yellow)zsh $($cyan)to kick in\n	3.Maybe move useful code from $($yellow).zshrc.pre-oh-my-zsh $($cyan)or $($yellow).bashrc\n	$($cyan)4.Keep your old $($yellow).bashrc .zshrc.pre-oh-my-zsh .Xresources.old $($cyan)tucked off somewhere$($reset)"
