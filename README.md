@@ -20,3 +20,8 @@ Screenshot
 -----------
 
 ![Screenshot 1](https://i.imgur.com/vwOPN63.png)
+
+Credits
+--------
+- much thanks to [oddlyspaced](https://github.com/oddlyspaced) for this aesthetic solarized setup
+- [bookercodes](https://github.com/bookercodes) for the amazing introduction to i3 videos and his dotfiles
