@@ -68,7 +68,7 @@ case $release in
 esac
 
 #cleanup leftovers
-rm -rf ~/.config/{i3,git,polybar,rofi,termite} ~/{.i3} ~/.fonts/{Font-Awesome,Inconsolata-for-Powerline}
+rm -rf ~/.config/{i3,git,polybar,rofi,termite} ~/{.i3} ~/.fonts/{Font-Awesome,Inconsolata-for-Powerline,Ubuntu-Nerd-Font-Complete}
 
 #make sure directories are present
 mkdir -p ~/{.fonts,.config}
