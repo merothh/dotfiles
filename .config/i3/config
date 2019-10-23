@@ -253,7 +253,7 @@ exec_always "feh --bg-scale ~/.config/i3/wallpaper.jpg"
 bindsym $mod+shift+x exec "i3lock --c $i3-lock-color"
 
 # screenshot key
-bindsym Print exec scrot --release ~/Pictures/Screenshots/Screenshot-%Y-%m-%d-%H-%M-%S.png && paplay ~/.config/i3/camera-shutter.oga
+bindsym Print exec scrot ~/Pictures/Screenshots/Screenshot-%Y-%m-%d-%H-%M-%S.png && paplay ~/.config/i3/camera-shutter.oga
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
