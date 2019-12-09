@@ -1,5 +1,5 @@
 [bar/top]
-monitor = eDP-1
+monitor = 
 width = 100%
 height = 34
 
@@ -22,7 +22,7 @@ modules-left = powermenu mpd
 modules-right = volume backlight wireless-network wired-network battery date
 
 [bar/bottom]
-monitor = eDP-1
+monitor = 
 bottom = true
 width = 100%
 height = 27
