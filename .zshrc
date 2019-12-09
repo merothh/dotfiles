@@ -109,4 +109,8 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 
+if [ -f $HOME/.exports ]; then
+	source $HOME/.exports
+fi
+
 source $ZSH/oh-my-zsh.sh
