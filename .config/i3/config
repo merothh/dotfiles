@@ -274,9 +274,6 @@ exec_always xinput --set-prop 14 "Synaptics Two-Finger Scrolling" 1 1
 # Polybar
 exec_always ~/.config/polybar/launch.sh
 
-# Conky
-exec --no-startup-id ~/.config/conky/conky_start.sh
-
 # assign colors that i use across the config
 set $bg-color            #222D32
 set $inactive-bg-color   #222D32
