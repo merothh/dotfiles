@@ -68,7 +68,7 @@ case $release in
 esac
 
 #cleanup leftovers
-rm -rf ~/.config/{i3,git,polybar,rofi,termite} ~/{.i3} ~/.fonts/{Font-Awesome,Inconsolata-for-Powerline,Ubuntu-Nerd-Font-Complete}
+rm -rf ~/.config/{i3,git,polybar,rofi,termite} ~/{.i3} ~/.fonts/{Font-Awesome,Inconsolata-for-Powerline,MaterialIcons-Regular,Ubuntu-Nerd-Font-Complete}
 
 #make sure directories are present
 mkdir -p ~/{.fonts,.config}
@@ -82,6 +82,7 @@ ln -s ~/dotfiles/.config/rofi ~/.config/rofi
 ln -s ~/dotfiles/.config/termite ~/.config/termite
 ln -s ~/dotfiles/.fonts/Font-Awesome ~/.fonts/Font-Awesome
 ln -s ~/dotfiles/.fonts/Inconsolata-for-Powerline ~/.fonts/Inconsolata-for-Powerline
+ln -s ~/dotfiles/.fonts/MaterialIcons-Regular ~/.fonts/MaterialIcons-Regular
 ln -s ~/dotfiles/.fonts/Ubuntu-Nerd-Font-Complete ~/.fonts/Ubuntu-Nerd-Font-Complete
 
 echo -e "\n$($cyan)// Backing up any previous $($yellow).Xresources $($cyan)& symlinking new one$($reset)\n"
