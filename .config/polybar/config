@@ -45,7 +45,7 @@ font-3 = NotoSans-Regular:size=8;-1
 font-4 = MaterialIcons:size=10;-1
 font-5 = Termsynu:size=8:antialias=false;0
 
-modules-left = bspwm
+modules-left = i3
 modules-right = cpu memory
 
 [module/backlight]
@@ -99,8 +99,8 @@ animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-framerate = 750
 
-[module/bspwm]
-type = internal/bspwm
+[module/i3]
+type = internal/i3
 
 ws-icon-0 = term;
 ws-icon-1 = web;
