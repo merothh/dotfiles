@@ -42,6 +42,11 @@ case $release in
 
 	;;
 	"Ubuntu")
+
+		echo -e "\n$($yellow)Ubuntu $($cyan)support has been disabled due to me not having a system to test the script anymore. If you are indeed using $($yellow) Ubuntu $($cyan) feel free to let me know about it.$($reset)"
+		exit
+
+		:'
 		echo -e "\n$($cyan)// Adding PPA for $($yellow) adapta-gtk-theme $($cyan) && $($yellow) papirus-icon-theme$($reset)\n"
 		sudo add-apt-repository ppa:papirus/papirus
 		sudo add-apt-repository ppa:tista/adapta
@@ -60,6 +65,7 @@ case $release in
 			sudo git clone https://github.com/robbyrussell/oh-my-zsh /usr/share/oh-my-zsh
 
 		fi
+		'
 	;;
 	*)
 		echo -e "\n$($cyan)// woops. you're probably not running an $($yellow)Arch $($blue)or $($yellow)Ubuntu $($cyan)based distro$($reset)\n"
