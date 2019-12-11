@@ -12,13 +12,13 @@ read zsh
 case $release in 
 	"Arch Linux"|"Antergos Linux"|"Manjaro Linux")
 
-		packages+=" i3-wm i3blocks i3lock rofi compton lsb-release scrot alsa-utils sysstat acpi feh playerctl xorg-xbacklight rxvt-unicode urxvt-perls adapta-gtk-theme adwaita-icon-theme papirus-icon-theme lxappearance otf-font-awesome"
+		packages+=" i3-wm i3blocks i3lock rofi compton lsb-release scrot alsa-utils sysstat acpi feh playerctl xorg-xbacklight rxvt-unicode urxvt-perls adapta-gtk-theme adwaita-icon-theme papirus-icon-theme lxappearance otf-font-awesome noto-fonts bdf-unifont"
 
 		echo -e "\n$($cyan)// Installing required packages$($reset)\n"
 		sudo pacman -S $packages
 
 		echo -e "\n$($cyan)// Installing AUR packages$($reset)\n"
-		aur_packages="polybar ttf-comfortaa"
+		aur_packages="polybar ttf-comfortaa termsyn-font"
 		aur_dependencies="git base-devel"
 
 		if [ "$zsh" = "y" ]; then
