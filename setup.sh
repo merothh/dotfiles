@@ -74,7 +74,7 @@ case $release in
 esac
 
 #cleanup leftovers
-rm -rf ~/.config/{i3,git,polybar,rofi,termite} ~/{.i3} ~/.fonts/{Inconsolata-for-Powerline,MaterialIcons-Regular}
+rm -rf ~/.config/{i3,git,polybar,rofi} ~/{.i3} ~/.fonts/{Inconsolata-for-Powerline,MaterialIcons-Regular}
 
 #make sure directories are present
 mkdir -p ~/{.fonts,.config}
@@ -85,7 +85,6 @@ ln -s ~/dotfiles/.config/i3 ~/.config/i3
 ln -s ~/dotfiles/.config/git ~/.config/git
 ln -s ~/dotfiles/.config/polybar ~/.config/polybar
 ln -s ~/dotfiles/.config/rofi ~/.config/rofi
-ln -s ~/dotfiles/.config/termite ~/.config/termite
 ln -s ~/dotfiles/.fonts/Inconsolata-for-Powerline ~/.fonts/Inconsolata-for-Powerline
 ln -s ~/dotfiles/.fonts/MaterialIcons-Regular ~/.fonts/MaterialIcons-Regular
 
