@@ -252,10 +252,5 @@ menu-0-2 = Logout
 menu-0-2-foreground = #00ff00
 menu-0-2-exec = i3-msg exit
 
-[module/clock]
-type = internal/date
-interval = 2
-date = %%{F#999}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
-
 ; vim:ft=dosini
 
