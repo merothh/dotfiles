@@ -20,7 +20,7 @@ font-3 = FontAwesome 5 Free:style=Regular:size=10;0
 font-4 = FontAwesome 5 Free:style=Solid:size=10;0
 font-5 = FontAwesome 5 Brands:style=Regular:size=10;0
 
-modules-left = powermenu mpd
+modules-left = powermenu
 modules-right = pulseaudio backlight wireless-network wired-network battery date
 
 [bar/bottom]
