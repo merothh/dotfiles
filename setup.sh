@@ -73,26 +73,30 @@ case $release in
 
 esac
 
-#cleanup leftovers
-rm -rf ~/.config/{i3,git,polybar,rofi} ~/{.i3} ~/.fonts/{Inconsolata-for-Powerline,MaterialIcons-Regular}
-
-#make sure directories are present
-mkdir -p ~/{.fonts,.config}
-mkdir -p ~/Pictures/Screenshots
-
-#symlink all the goodies
-ln -s ~/dotfiles/.config/i3 ~/.config/i3
-ln -s ~/dotfiles/.config/git ~/.config/git
-ln -s ~/dotfiles/.config/polybar ~/.config/polybar
-ln -s ~/dotfiles/.config/rofi ~/.config/rofi
-ln -s ~/dotfiles/.fonts/Inconsolata-for-Powerline ~/.fonts/Inconsolata-for-Powerline
-ln -s ~/dotfiles/.fonts/MaterialIcons-Regular ~/.fonts/MaterialIcons-Regular
-
-echo -e "\n$($cyan)// Backing up any previous $($yellow).Xresources $($cyan)& symlinking new one$($reset)\n"
+echo -e "\n$($cyan)// Backing up any previous $($yellow).Xresources$($reset)\n"
 if [ -f ~/.Xresources ]; then
 	mv ~/.Xresources ~/.Xresources.old
 fi
-ln -s ~/dotfiles/.Xresources ~/.Xresources
+
+symlink_list=(.config/i3 .config/git .config/polybar .config/rofi .fonts/Inconsolata-for-Powerline .fonts/Material-Icons .Xresources)
+# cleanup previous files if any
+for file in ${symlink_list[*]}
+do
+	rm -rf ~/$file
+done
+
+# make sure directories we need are present
+dir_list=(.fonts .config Pictures/Screenshots)
+for dir in ${dir_list[*]}
+do
+	mkdir -p ~/$dir
+done
+
+# go ahead and symlink everything
+for file in ${symlink_list[*]}
+do
+    ln -s ~/dotfiles/$file ~/$file
+done
 
 if [ "$zsh" = "y" ]; then
 
