@@ -10,7 +10,7 @@ echo -e "\n$($cyan)// Switch to $($yellow)zsh $($cyan)+ $($yellow)oh-my-zsh-git 
 read zsh
 
 case $release in 
-	"Arch Linux"|"Antergos Linux"|"Manjaro Linux")
+	"Arch Linux"|"Manjaro Linux")
 
 		packages=" i3-wm i3lock rofi picom scrot feh playerctl rxvt-unicode urxvt-perls adwaita-icon-theme papirus-icon-theme lxappearance otf-font-awesome noto-fonts bdf-unifont"
 
