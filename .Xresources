@@ -39,7 +39,7 @@ URxvt.scrollBar: false
 
 !Transparency
 URxvt.depth: 32
-URxvt.background: [75]#000000
+URxvt.background: [70]#000000
 
 !Larger history limit
 urxvt.saveLines: 999999
