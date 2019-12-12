@@ -177,7 +177,7 @@ bindsym $mod+Shift+KP_0 move container to workspace $ws10
 assign [class="Tilix"] $ws1
 assign [class="URxvt"] $ws1
 
-assign [class="Firefox"] $ws2
+assign [class="firefox"] $ws2
 assign [class="Google-chrome"] $ws2
 assign [class="Chromium"] $ws2
 
