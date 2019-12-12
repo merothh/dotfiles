@@ -189,7 +189,7 @@ bar-progress-empty-foreground = #44
 
 [module/wireless-network]
 type = internal/network
-interface = wlp2s0
+interface = ${env:WLAN_INTERFACE:net1}
 interval = 3.0
 ping-interval = 10
 
@@ -212,7 +212,7 @@ animation-packetloss-framerate = 500
 
 [module/wired-network]
 type = internal/network
-interface = eno1
+interface = ${env:ETH_INTERFACE:net0}
 interval = 3.0
 
 label-connected =    %{T3}%local_ip%%{T-}
