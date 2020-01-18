@@ -39,38 +39,15 @@ case $release in
 			cd ../
 			rm -rf .build
 		done
-
 	;;
 	"Ubuntu")
 
 		echo -e "\n$($yellow)Ubuntu $($cyan)support has been disabled due to me not having a system to test the script anymore. If you are indeed using $($yellow) Ubuntu $($cyan) feel free to let me know about it.$($reset)"
 		exit
-
-		:'
-		echo -e "\n$($cyan)// Adding PPA for $($yellow) adapta-gtk-theme $($cyan) && $($yellow) papirus-icon-theme$($reset)\n"
-		sudo add-apt-repository ppa:papirus/papirus
-		sudo add-apt-repository ppa:tista/adapta
-
-		packages+=" i3-wm i3blocks i3lock rofi compton scrot alsa-utils sysstat acpi feh xbacklight rxvt-unicode adapta-gtk-theme adwaita-icon-theme-full papirus-icon-theme lxappearance"
-
-		echo -e "\n$($cyan)// Installing required packages$($reset)\n"
-		sudo apt install $packages
-
-		#clone/install oh-my-zsh
-		if [ "$zsh" = "y" ]; then
-
-			echo -e "\n$($cyan)// Installing $($yellow)oh-my-zsh$($reset)\n"
-			sudo apt install git zsh
-			sudo rm -rf ~/.oh-my-zsh /usr/share/oh-my-zsh
-			sudo git clone https://github.com/robbyrussell/oh-my-zsh /usr/share/oh-my-zsh
-
-		fi
-		'
 	;;
 	*)
-		echo -e "\n$($cyan)// woops. you're probably not running an $($yellow)Arch $($blue)or $($yellow)Ubuntu $($cyan)based distro$($reset)\n"
+		echo -e "\n$($cyan)// woops. you're probably not running an $($yellow)Arch $($cyan)based distro$($reset)\n"
 	;;
-
 esac
 
 backup_list=(.vimrc .Xresources)
