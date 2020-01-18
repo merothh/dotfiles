@@ -241,7 +241,7 @@ exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-ag
 exec_always --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
 exec_always --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
 
-# disable focus follwing the damn mouse
+# disable window focus following the damn mouse
 focus_follows_mouse no
 
 # keep the screen compositor running always for transparency
