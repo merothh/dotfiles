@@ -1,0 +1,2 @@
+colo ron
+syntax on

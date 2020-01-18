@@ -78,7 +78,7 @@ if [ -f ~/.Xresources ]; then
 	mv ~/.Xresources ~/.Xresources.old
 fi
 
-symlink_list=(.config/i3 .config/git .config/polybar .config/rofi .fonts/Inconsolata-for-Powerline .fonts/Material-Icons .Xresources)
+symlink_list=(.config/i3 .config/git .config/polybar .config/rofi .fonts/Inconsolata-for-Powerline .fonts/Material-Icons .vimrc .Xresources)
 # cleanup previous files if any
 for file in ${symlink_list[*]}
 do
