@@ -18,7 +18,7 @@ case $release in
 		sudo pacman -S $packages
 
 		echo -e "\n$($cyan)// Installing AUR packages$($reset)\n"
-		aur_packages="polybar ttf-comfortaa termsyn-font"
+		aur_packages="polybar ttf-comfortaa termsyn-font urxvt-resize-font-git"
 		aur_dependencies="git base-devel"
 
 		if [ "$zsh" = "y" ]; then

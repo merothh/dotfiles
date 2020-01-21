@@ -60,7 +60,7 @@ URxvt.background: [70]#000000
 urxvt.saveLines: 999999
 
 !Extensions
-URxvt.perl-ext-common: default,keyboard-select,matcher,selection-to-clipboard,url-select
+URxvt.perl-ext-common: default,keyboard-select,matcher,resize-font,selection-to-clipboard,url-select
 
 !! keyboard-select:
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
