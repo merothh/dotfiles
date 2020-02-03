@@ -12,7 +12,7 @@ read zsh
 case $release in 
 	"Arch Linux"|"Manjaro Linux")
 
-		packages=" i3-wm i3lock rofi picom scrot feh playerctl rxvt-unicode urxvt-perls adwaita-icon-theme papirus-icon-theme lxappearance otf-font-awesome noto-fonts bdf-unifont"
+		packages=" i3-wm i3lock rofi picom scrot feh playerctl rxvt-unicode urxvt-perls adwaita-icon-theme papirus-icon-theme pulseaudio lxappearance otf-font-awesome noto-fonts bdf-unifont"
 
 		echo -e "\n$($cyan)// Installing required packages$($reset)\n"
 		sudo pacman -S $packages
