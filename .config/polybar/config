@@ -15,7 +15,7 @@ module-margin = 4
 
 font-0 = NotoSans-Regular:size=8;-1
 font-1 = MaterialIcons:size=10;0
-font-2 = Termsynu:size=8:antialias=false;-2
+font-2 = Misc Termsynu:size=8:antialias=false;-2
 font-3 = FontAwesome 5 Free:style=Regular:size=10;0
 font-4 = FontAwesome 5 Free:style=Solid:size=10;0
 font-5 = FontAwesome 5 Brands:style=Regular:size=10;0
