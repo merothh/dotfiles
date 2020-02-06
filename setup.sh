@@ -4,7 +4,7 @@ cyan='tput setaf 6'
 yellow='tput setaf 3'
 reset='tput sgr0'
 
-release=$(head /etc/os-release -n 1 | cut -d '"' -f 2)
+release=$(sed -rn 's/^NAME="([^"]*)"/\1/p' /etc/os-release)
 
 echo -e "\n$($cyan)// Switch to $($yellow)zsh $($cyan)+ $($yellow)oh-my-zsh-git $($cyan)? [y/n]$($reset)?"
 read zsh
