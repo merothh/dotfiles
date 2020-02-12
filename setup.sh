@@ -40,11 +40,6 @@ case $release in
 			rm -rf .build
 		done
 	;;
-	"Ubuntu")
-
-		echo -e "\n$($yellow)Ubuntu $($cyan)support has been disabled due to me not having a system to test the script anymore. If you are indeed using $($yellow) Ubuntu $($cyan) feel free to let me know about it.$($reset)"
-		exit
-	;;
 	*)
 		echo -e "\n$($cyan)// woops. you're probably not running an $($yellow)Arch $($cyan)based distro$($reset)\n"
 	;;
