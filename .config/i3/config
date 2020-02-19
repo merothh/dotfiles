@@ -275,6 +275,14 @@ exec_always --no-startup-id xinput --set-prop 14 "Synaptics Two-Finger Scrolling
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
+# set border to zero
+for_window [class=".*"] border pixel 0
+
+# set gaps width
+gaps bottom 0
+gaps inner 5
+gaps outer 3
+
 # assign colors that i use across the config
 set $bg-color            #222D32
 set $inactive-bg-color   #222D32
