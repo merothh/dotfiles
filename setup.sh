@@ -45,17 +45,17 @@ case $release in
 	;;
 esac
 
-backup_list=(.vimrc .Xresources)
 if [ "$zsh" = "y" ]; then
-	backup_list+=(.p10k.zsh .zshrc)
 	echo -e "\n$($cyan)// Changing default shell to $($yellow)zsh$($reset)\n"
 	chsh -s $(which zsh)
 fi
 
 rm -rf ~/dotfiles/.backup; mkdir ~/dotfiles/.backup
+
+backup_list=(.p10k.zsh .vimrc .Xresources .zshrc)
 for file in ${backup_list[*]}
 do
-	cp ~/$file ~/dotfiles/.backup
+	cp ~/$file ~/dotfiles/.backup 2> /dev/null
 done
 
 symlink_list=(.config/i3 .config/git .config/polybar .config/rofi .fonts/Inconsolata-for-Powerline .fonts/Material-Icons .p10k.zsh .vimrc .Xresources)
