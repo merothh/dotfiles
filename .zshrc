@@ -1,3 +1,7 @@
+# enable autocomplete and set related options
+autoload -U compinit; compinit
+setopt autocd
+
 # enable history and set related options
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=50000
