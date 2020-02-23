@@ -18,7 +18,7 @@ case $release in
 		sudo pacman -S $packages
 
 		echo -e "\n$($cyan)// Installing AUR packages$($reset)\n"
-		aur_packages="polybar ttf-comfortaa termsyn-font urxvt-resize-font-git"
+		aur_packages="nerd-fonts-inconsolata polybar ttf-comfortaa termsyn-font urxvt-resize-font-git"
 		aur_dependencies="git base-devel"
 
 		if [ "$zsh" = "y" ]; then
@@ -58,7 +58,7 @@ do
 	cp ~/$file ~/dotfiles/.backup 2> /dev/null
 done
 
-symlink_list=(.config/i3 .config/git .config/polybar .config/rofi .fonts/Inconsolata-for-Powerline .fonts/Material-Icons .p10k.zsh .vimrc .Xresources)
+symlink_list=(.config/i3 .config/git .config/polybar .config/rofi .fonts/Material-Icons .p10k.zsh .vimrc .Xresources)
 # cleanup previous files if any
 for file in ${symlink_list[*]}
 do

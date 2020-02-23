@@ -44,10 +44,10 @@
 !!!!!!!!!!!
 
 !Fonts
-URxvt.font: xft:Inconsolata for Powerline:size=12:antialias=true:hinting=true,xft:dejavu sans mono:size=10:antialias=true:hinting=true
-URxvt.boldFont: xft:Inconsolata for Powerline:bold:size=12:antialias=true:hinting=true,xft:dejavu sans mono:bold:size=10:antialias=true:hinting=true
-URxvt.italicFont: xft:Inconsolata for Powerline:italic:size=12:antialias=true:hinting=true,xft:dejavu sans mono:italic:size=10:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:Inconsolata for Powerline:bold:italic:size=12:antialias=true:hinting=true,xft:dejavu sans mono:bold:italic:size=10:antialias=true:hinting=true
+URxvt.font: xft:Inconsolata Nerd Font:size=12:antialias=true:hinting=true,xft:dejavu sans mono:size=10:antialias=true:hinting=true
+URxvt.boldFont: xft:Inconsolata Nerd Font:bold:size=12:antialias=true:hinting=true,xft:dejavu sans mono:bold:size=10:antialias=true:hinting=true
+URxvt.italicFont: xft:Inconsolata Nerd Font:italic:size=12:antialias=true:hinting=true,xft:dejavu sans mono:italic:size=10:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:Inconsolata Nerd Font:bold:italic:size=12:antialias=true:hinting=true,xft:dejavu sans mono:bold:italic:size=10:antialias=true:hinting=true
 
 !Scrollbar stuff
 URxvt.scrollBar: false
