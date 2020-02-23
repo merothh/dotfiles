@@ -12,13 +12,13 @@ read zsh
 case $release in 
 	"Arch Linux"|"Manjaro Linux")
 
-		packages=" i3-gaps i3lock rofi picom scrot feh playerctl rxvt-unicode urxvt-perls adwaita-icon-theme papirus-icon-theme pulseaudio lxappearance otf-font-awesome ttf-dejavu noto-fonts bdf-unifont"
+		packages=" i3-gaps i3lock rofi picom scrot feh playerctl rxvt-unicode urxvt-perls adwaita-icon-theme papirus-icon-theme pulseaudio lxappearance otf-font-awesome noto-fonts bdf-unifont"
 
 		echo -e "\n$($cyan)// Installing required packages$($reset)\n"
 		sudo pacman -S $packages
 
 		echo -e "\n$($cyan)// Installing AUR packages$($reset)\n"
-		aur_packages="nerd-fonts-inconsolata polybar ttf-comfortaa termsyn-font urxvt-resize-font-git"
+		aur_packages="polybar ttf-comfortaa termsyn-font urxvt-resize-font-git"
 		aur_dependencies="git base-devel"
 
 		if [ "$zsh" = "y" ]; then
@@ -58,7 +58,7 @@ do
 	cp ~/$file ~/dotfiles/.backup 2> /dev/null
 done
 
-symlink_list=(.config/i3 .config/git .config/polybar .config/rofi .fonts/Material-Icons .p10k.zsh .vimrc .Xresources)
+symlink_list=(.config/i3 .config/git .config/polybar .config/rofi .fonts/Material-Icons .fonts/MesloLGS-NF .p10k.zsh .vimrc .Xresources)
 # cleanup previous files if any
 for file in ${symlink_list[*]}
 do

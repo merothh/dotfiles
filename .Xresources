@@ -44,10 +44,10 @@
 !!!!!!!!!!!
 
 !Fonts
-URxvt.font: xft:Inconsolata Nerd Font:size=12:antialias=true:hinting=true,xft:dejavu sans mono:size=10:antialias=true:hinting=true
-URxvt.boldFont: xft:Inconsolata Nerd Font:bold:size=12:antialias=true:hinting=true,xft:dejavu sans mono:bold:size=10:antialias=true:hinting=true
-URxvt.italicFont: xft:Inconsolata Nerd Font:italic:size=12:antialias=true:hinting=true,xft:dejavu sans mono:italic:size=10:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:Inconsolata Nerd Font:bold:italic:size=12:antialias=true:hinting=true,xft:dejavu sans mono:bold:italic:size=10:antialias=true:hinting=true
+URxvt.font: xft:MesloLGS NF:size=10:antialias=true:hinting=true
+URxvt.boldFont: xft:MesloLGS NF:bold:size=10:antialias=true:hinting=true
+URxvt.italicFont: xft:MesloLGS NF:italic:size=10:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:MesloLGS NF:bold:italic:size=10:antialias=true:hinting=true
 
 !Scrollbar stuff
 URxvt.scrollBar: false
@@ -78,7 +78,7 @@ URxvt.url-select.underline: true
 !! rofi !!
 !!!!!!!!!!
 
-rofi.font: Inconsolata for Powerline 12
+rofi.font: MesloLGS NF 10
 rofi.padding: 20
 rofi.line-padding: 2
 rofi.modi: combi
