@@ -6,7 +6,7 @@ reset='tput sgr0'
 
 release=$(sed -rn 's/^NAME="([^"]*)"/\1/p' /etc/os-release)
 
-echo -e "\n$($cyan)// Switch to $($yellow)zsh $($cyan)+ $($yellow)oh-my-zsh-git $($cyan)? [y/n]$($reset)?"
+echo -e "\n$($cyan)// Switch to $($yellow)zsh $($cyan)+ $($yellow)zsh-theme-powerlevel10k-git $($cyan)? [y/n]$($reset)?"
 read zsh
 
 case $release in 
@@ -23,7 +23,7 @@ case $release in
 
 		if [ "$zsh" = "y" ]; then
 
-			aur_packages+=" oh-my-zsh-git"
+			aur_packages+=" zsh-theme-powerlevel10k-git"
 			aur_dependencies+=" zsh"
 		fi
 
@@ -47,7 +47,7 @@ esac
 
 backup_list=(.vimrc .Xresources)
 if [ "$zsh" = "y" ]; then
-	backup_list+=(.zshrc)
+	backup_list+=(.p10k.zsh .zshrc)
 	echo -e "\n$($cyan)// Changing default shell to $($yellow)zsh$($reset)\n"
 	chsh -s $(which zsh)
 fi
@@ -58,7 +58,7 @@ do
 	cp ~/$file ~/dotfiles/.backup
 done
 
-symlink_list=(.config/i3 .config/git .config/polybar .config/rofi .fonts/Inconsolata-for-Powerline .fonts/Material-Icons .vimrc .Xresources)
+symlink_list=(.config/i3 .config/git .config/polybar .config/rofi .fonts/Inconsolata-for-Powerline .fonts/Material-Icons .p10k.zsh .vimrc .Xresources)
 # cleanup previous files if any
 for file in ${symlink_list[*]}
 do
