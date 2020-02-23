@@ -9,17 +9,13 @@ setopt hist_verify               # show command with history expansion to user b
 setopt inc_append_history        # add commands to HISTFILE in order of execution
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
+[ ! -d "$HOME/bin" ] || PATH="$HOME/bin:$PATH"
 
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
-fi
+# source my local exports
+[ ! -f $HOME/.exports ] || source $HOME/.exports
 
-if [ -f $HOME/.exports ]; then
-	source $HOME/.exports
-fi
+# source vte.sh to keep tilix happy
+[ ! $TILIX_ID ] || source /etc/profile.d/vte.sh
 
 # source powerlevel10k zsh theme
 [ ! -f /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ] || source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
