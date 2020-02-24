@@ -17,6 +17,9 @@ autoload -U up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
+# enable vi mode | should have higher preference than other key bindings
+bindkey -v
+
 # properly bind keys
 ## create a zkbd compatible hash;
 ## to add other keys to this hash, see: man 5 terminfo
