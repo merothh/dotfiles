@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-export ETH_INTERFACE=$(ip link show | grep en | sed 's/.*: \(.*\):.*/\1/')
-export WLAN_INTERFACE=$(ip link show | grep wl | sed 's/.*: \(.*\):.*/\1/')
+export ETH_INTERFACE=$(ip link show | sed -n 's/.*: \(en.*\):.*/\1/p')
+export WLAN_INTERFACE=$(ip link show | sed -n 's/.*: \(wl.*\):.*/\1/p')
 
 # Terminate already running bar instances
 killall -q polybar
