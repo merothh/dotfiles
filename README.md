@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-bunch of configs i use for my setup
+mostly a bunch of configs that revolve around my i3-gaps setup
 
 
 Usage
@@ -19,7 +19,7 @@ pull``
 Screenshot
 -----------
 
-![Screenshot 1](https://i.imgur.com/SLSEstf.png)
+![Screenshot 1](https://i.imgur.com/BHW91xw.png)
 
 Credits
 --------
