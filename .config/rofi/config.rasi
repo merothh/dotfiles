@@ -1,0 +1,10 @@
+configuration {
+	modi: "combi";
+	font: "MesloLGS NF 10";
+	padding: 10;
+	show-icons: true;
+	combi-modi: "drun,run";
+	hide-scrollbar: true;
+	color-normal: "#33393B, #EEEEEC, #1B1F20, #A4A4A4, #222D32";
+	color-window: "#232729, #1B1F20, #33393B";
+}

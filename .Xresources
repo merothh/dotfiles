@@ -73,20 +73,3 @@ URxvt.matcher.button: 1
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
-
-!!!!!!!!!!
-!! rofi !!
-!!!!!!!!!!
-
-rofi.font: MesloLGS NF 10
-rofi.padding: 10
-rofi.modi: combi
-rofi.combi-modi: drun,run
-rofi.show-icons: true
-rofi.drun-icon-theme: Papirus-Adapta-Nokto
-rofi.hide-scrollbar: true
-
-! State:           'bg',          'fg',          'bgalt',       'hlbg',        'hlfg'
-rofi.color-normal: #33393B,       #EEEEEC,       #1B1F20,       #A4A4A4,       #222D32
-!                  'background',       'border',       'separator'
-rofi.color-window: #232729,            #1B1F20,        #33393B
