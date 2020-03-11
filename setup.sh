@@ -45,20 +45,23 @@ case $release in
 	;;
 esac
 
+backup_list=(.p10k.zsh .vimrc .Xresources .zshrc)
+symlink_list=(.config/i3 .config/git .config/polybar .config/rofi .fonts/Material-Icons .fonts/MesloLGS-NF .p10k.zsh .vimrc .Xresources)
+dir_list=(.fonts .config Pictures/Screenshots)
+
 if [ "$zsh" = "y" ]; then
+	symlink_list+=" .zshrc"
 	echo -e "\n$($cyan)// Changing default shell to $($yellow)zsh$($reset)\n"
 	chsh -s $(which zsh)
 fi
 
+# backup some specified files
 rm -rf ~/dotfiles/.backup; mkdir ~/dotfiles/.backup
-
-backup_list=(.p10k.zsh .vimrc .Xresources .zshrc)
 for file in ${backup_list[*]}
 do
 	cp ~/$file ~/dotfiles/.backup 2> /dev/null
 done
 
-symlink_list=(.config/i3 .config/git .config/polybar .config/rofi .fonts/Material-Icons .fonts/MesloLGS-NF .p10k.zsh .vimrc .Xresources)
 # cleanup previous files if any
 for file in ${symlink_list[*]}
 do
@@ -66,7 +69,6 @@ do
 done
 
 # make sure directories we need are present
-dir_list=(.fonts .config Pictures/Screenshots)
 for dir in ${dir_list[*]}
 do
 	mkdir -p ~/$dir
