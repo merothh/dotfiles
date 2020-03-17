@@ -12,14 +12,14 @@ read zsh
 case $release in 
 	"Arch Linux"|"Manjaro Linux")
 
-		packages=" i3-gaps i3lock rofi picom scrot feh playerctl rxvt-unicode urxvt-perls adwaita-icon-theme papirus-icon-theme pulseaudio lxappearance otf-font-awesome noto-fonts bdf-unifont"
+		packages="adwaita-icon-theme bdf-unifont feh i3-gaps i3lock lxappearance noto-fonts otf-font-awesome papirus-icon-theme picom playerctl pulseaudio rofi rxvt-unicode scrot urxvt-perls"
 
 		echo -e "\n$($cyan)// Installing required packages$($reset)\n"
 		sudo pacman -S $packages
 
 		echo -e "\n$($cyan)// Installing AUR packages$($reset)\n"
 		aur_packages="polybar ttf-comfortaa termsyn-font urxvt-resize-font-git"
-		aur_dependencies="git base-devel"
+		aur_dependencies="base-devel git"
 
 		if [ "$zsh" = "y" ]; then
 
