@@ -261,9 +261,9 @@ bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Audio Controls
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 2  +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 2  -5% #decrease sound volume
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec ponymix increase 5 --max-volume 153 # increase volume
+bindsym XF86AudioLowerVolume exec ponymix decrease 5 --max-volume 153 # decrease volume
+bindsym XF86AudioMute exec ponymix toggle # toggle mute
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
