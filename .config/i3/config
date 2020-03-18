@@ -284,9 +284,9 @@ gaps inner 5
 gaps outer 3
 
 # assign colors that i use across the config
-set $bg-color            #222D32
-set $inactive-bg-color   #222D32
-set $i3-lock-color        222D32
+set $bg-color            #33393B
+set $inactive-bg-color   #33393B
+set $i3-lock-color        33393B
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
