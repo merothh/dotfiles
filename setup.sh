@@ -14,18 +14,14 @@ case $release in
 
 		packages="adwaita-icon-theme bdf-unifont feh i3-gaps i3lock lxappearance noto-fonts otf-font-awesome papirus-icon-theme picom playerctl ponymix pulseaudio rofi rxvt-unicode scrot urxvt-perls xorg-xbacklight"
 
+		[ ! "$zsh" = "y" ] || packages+=" zsh zsh-theme-powerlevel10k"
+
 		echo -e "\n$($cyan)// Installing required packages$($reset)\n"
 		sudo pacman -S $packages
 
 		echo -e "\n$($cyan)// Installing AUR packages$($reset)\n"
 		aur_packages="polybar ttf-comfortaa termsyn-font urxvt-resize-font-git"
 		aur_dependencies="base-devel git"
-
-		if [ "$zsh" = "y" ]; then
-
-			aur_packages+=" zsh-theme-powerlevel10k-git"
-			aur_dependencies+=" zsh"
-		fi
 
 		echo -e "\n$($cyan)Installing dependencies for building $($yellow) AUR packages $($reset)\n"
 		sudo pacman -S $aur_dependencies
