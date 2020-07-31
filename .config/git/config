@@ -10,3 +10,6 @@
 [user]
 	name = merothh
 	email = merothh@gmail.com
+
+[review "review.lineageos.org"]
+	username = merothh
