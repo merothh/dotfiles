@@ -51,6 +51,10 @@ if [ "$zsh" = "y" ]; then
 	chsh -s $(which zsh)
 fi
 
+# get rid of system beep
+sudo rmmod pcspkr &> /dev/null
+echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf 1> /dev/null
+
 # backup some specified files
 rm -rf ~/dotfiles/.backup; mkdir ~/dotfiles/.backup
 for file in ${backup_list[*]}
