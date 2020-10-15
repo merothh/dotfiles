@@ -20,7 +20,7 @@ case $release in
 		sudo pacman -S $packages
 
 		echo -e "\n$($cyan)// Installing AUR packages$($reset)\n"
-		aur_packages="urxvt-resize-font-git"
+		aur_packages="urxvt-resize-font-git ttf-meslo"
 		aur_dependencies="base-devel git"
 
 		echo -e "\n$($cyan)Installing dependencies for building $($yellow) AUR packages $($reset)\n"
