@@ -62,9 +62,6 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 	add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
 fi
 
-# set PATH so it includes user's private bin if it exists
-[ ! -d "$HOME/bin" ] || PATH="$HOME/bin:$PATH"
-
 # source my local exports
 [ ! -f $HOME/.exports ] || source $HOME/.exports
 
