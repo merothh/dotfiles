@@ -1,0 +1,1 @@
+scrot ~/Pictures/Screenshots/Screenshot-%Y-%m-%d-%H-%M-%S.png && paplay ~/.local/share/dwm/camera-shutter.oga
