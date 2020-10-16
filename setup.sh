@@ -80,4 +80,8 @@ do
     ln -s ~/dotfiles/$file ~/$file
 done
 
-echo -e "\n$($cyan)// All done. Make sure to \n	1. Set themes and fonts using $($yellow)lxappearance $($cyan)after logging into i3-gaps\n	2. Log out and back in for $($yellow)zsh $($cyan)to kick in\n	3. Your previous $($yellow).bashrc .zshrc .Xresources $($cyan) are at $($yellow) ~/dotfiles/.backup $($cyan)\n	4. Maybe move useful code from previous $($yellow).zshrc $($cyan)or $($yellow).bashrc\n $($reset)"
+echo -e "\n$($cyan)// All done. Make sure to:\n
+  1. Set themes and fonts using $($yellow)lxappearance $($cyan)after logging into dwm\n
+  2. Log out and back in for $($yellow)zsh $($cyan)to kick in\n
+  3. Your previous $($yellow).bashrc .zshrc .Xresources $($cyan) are at $($yellow) ~/dotfiles/.backup $($cyan)\n
+  4. Maybe move useful code from previous $($yellow).zshrc $($cyan)or $($yellow).bashrc\n $($reset)"
