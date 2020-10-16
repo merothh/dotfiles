@@ -1,0 +1,4 @@
+DATE=$(date '+%a %Y-%m-%d %I:%M %p')
+GLYPH=
+
+echo "$GLYPH $DATE"
