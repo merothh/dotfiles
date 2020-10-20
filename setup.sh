@@ -35,6 +35,18 @@ case $release in
 			cd ../
 			rm -rf .build
 		done
+
+		git_packages="dwm dwmblocks"
+
+		echo -e "\n$($cyan)// Cloning & Building $($yellow)git packages$($reset)\n"
+		for git_package in $git_packages
+		do
+			echo -e "\n$($yellow)$git_package$($reset)\n"
+			rm -rf ~/.local/src/$git_package
+			git clone https://github.com/merothh/$git_package ~/.local/src/$git_package
+			pushd ~/.local/src/$git_package 1> /dev/null && sudo make install
+			popd 1> /dev/null
+		done
 	;;
 	*)
 		echo -e "\n$($cyan)// woops. you're probably not running an $($yellow)Arch $($cyan)based distro$($reset)\n"
