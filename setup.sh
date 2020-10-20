@@ -7,7 +7,7 @@ reset='tput sgr0'
 release=$(sed -rn 's/^NAME="([^"]*)"/\1/p' /etc/os-release)
 
 echo -e "\n$($cyan)// Switch to $($yellow)zsh $($cyan)+ $($yellow)zsh-theme-powerlevel10k-git $($cyan)? [y/n]$($reset)?"
-read zsh
+read -r zsh
 
 case $release in
 "Arch Linux" | "Artix Linux" | "Manjaro Linux")
@@ -29,7 +29,7 @@ case $release in
 	echo -e "\n$($cyan)// Cloning & Building $($yellow)AUR packages$($reset)\n"
 	for aur_package in $aur_packages; do
 		echo -e "\n$($yellow)$aur_package$($reset)\n"
-		git clone https://aur.archlinux.org/$aur_package .build
+		git clone https://aur.archlinux.org/"$aur_package" .build
 		cd .build && makepkg -si
 		cd ../
 		rm -rf .build
@@ -40,10 +40,10 @@ case $release in
 	echo -e "\n$($cyan)// Cloning & Building $($yellow)git packages$($reset)\n"
 	for git_package in $git_packages; do
 		echo -e "\n$($yellow)$git_package$($reset)\n"
-		rm -rf ~/.local/src/$git_package
-		git clone https://github.com/merothh/$git_package ~/.local/src/$git_package
-		pushd ~/.local/src/$git_package 1>/dev/null && sudo make install
-		popd 1>/dev/null
+		rm -rf ~/.local/src/"$git_package"
+		git clone https://github.com/merothh/"$git_package" ~/.local/src/"$git_package"
+		pushd ~/.local/src/"$git_package" 1>/dev/null && sudo make install
+		popd 1>/dev/null || ( echo "popd: failed"; exit)
 	done
 	;;
 *)
@@ -56,9 +56,9 @@ symlink_list=(.config/git .fonts/Material-Icons .fonts/MesloLGS-NF .local/bin .l
 dir_list=(.fonts .config .local/share Pictures/Screenshots)
 
 if [ "$zsh" = "y" ]; then
-	symlink_list+=" .zshrc"
+	symlink_list+=(" .zshrc")
 	echo -e "\n$($cyan)// Changing default shell to $($yellow)zsh$($reset)\n"
-	chsh -s $(which zsh)
+	chsh -s "$(which zsh)"
 fi
 
 # get rid of system beep
@@ -69,22 +69,22 @@ echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf 1>/dev/null
 rm -rf ~/dotfiles/.backup
 mkdir ~/dotfiles/.backup
 for file in ${backup_list[*]}; do
-	cp ~/$file ~/dotfiles/.backup 2>/dev/null
+	cp ~/"$file" ~/dotfiles/.backup 2>/dev/null
 done
 
 # cleanup previous files if any
 for file in ${symlink_list[*]}; do
-	rm -rf ~/$file
+	rm -rf ~/"$file"
 done
 
 # make sure directories we need are present
 for dir in ${dir_list[*]}; do
-	mkdir -p ~/$dir
+	mkdir -p ~/"$dir"
 done
 
 # go ahead and symlink everything
 for file in ${symlink_list[*]}; do
-	ln -s ~/dotfiles/$file ~/$file
+	ln -s ~/dotfiles/"$file" ~/"$file"
 done
 
 echo -e "\n$($cyan)// All done. Make sure to:\n
