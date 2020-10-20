@@ -1,3 +1,3 @@
 colo ron
-set tabstop=4
+set tabstop=3
 syntax on
