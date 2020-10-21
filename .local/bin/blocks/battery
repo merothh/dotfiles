@@ -1,7 +1,21 @@
-GLYPH=""
+GLYPH=
 PERCENT=$(cat /sys/class/power_supply/BAT0/capacity)
 STATUS=$(cat /sys/class/power_supply/BAT0/status)
 
-[ "$STATUS" = "Discharging" ] || GLYPH=""
+if [ "$STATUS" = "Charging" ]; then
+	GLYPH=
+else
+	if [ $PERCENT -gt 75 ]; then
+		GLYPH=
+	elif [ $PERCENT -gt 50 ]; then
+		GLYPH=
+	elif [ $PERCENT -gt 25 ]; then
+		GLYPH=
+	elif [ $PERCENT -gt 10 ]; then
+		GLYPH=
+	else
+		GLYPH=
+	fi
+fi
 
 echo "$GLYPH $PERCENT%"
