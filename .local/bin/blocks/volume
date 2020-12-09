@@ -1,0 +1,22 @@
+GLYPH=""
+MUTE=$(
+	ponymix is-muted
+	echo $?
+)
+VOLUME=$(ponymix get-volume)
+
+if [ "$MUTE" -eq 1 ]; then
+	if [ $VOLUME -gt 60 ]; then
+		GLYPH=
+	elif [ "$VOLUME" -gt 30 ]; then
+		GLYPH=
+	else
+		GLYPH=
+	fi
+	VOLUME=${VOLUME}%
+else
+	GLYPH=
+	VOLUME=muted
+fi
+
+echo "$GLYPH" "$VOLUME"
