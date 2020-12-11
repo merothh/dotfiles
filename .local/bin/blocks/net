@@ -5,6 +5,10 @@ up)
 	GLYPH=""
 	SSID=$(nmcli d wifi show | sed -rn 's/^SSID: ()/\1/p')
 	;;
+down)
+	GLYPH=""
+	SSID=""
+	;;
 esac
 
 echo "$GLYPH" "$SSID"
