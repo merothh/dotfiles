@@ -3,7 +3,7 @@ STATE=/sys/class/net/w*/operstate
 case "$(cat $STATE)" in
 up)
 	GLYPH=""
-	SSID=$(nmcli d wifi show | head -1 | cut -d " " -f 2-)
+	SSID=$(nmcli d wifi show | sed -rn 's/^SSID: ()/\1/p')
 	;;
 esac
 
