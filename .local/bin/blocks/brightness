@@ -1,0 +1,4 @@
+GLYPH=
+PERCENT=$(xbacklight)
+
+printf "%s %.f%s" "$GLYPH" "${PERCENT}" "%"
