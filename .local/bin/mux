@@ -1,0 +1,24 @@
+SOURCE="$1"
+BRAND=xiaomi
+DEVICE="$2"
+COMMON=sm6150
+
+ls "$SOURCE/device/$BRAND/$DEVICE" "$SOURCE/device/$BRAND/$COMMON-common" "$SOURCE/kernel/$BRAND/$COMMON" "$SOURCE/vendor/$BRAND" >/dev/null 2>&1 || { echo "Improper Paths!"; exit; }
+
+tmux new-session -s $DEVICE \; \
+  send-keys "cd $SOURCE" C-m \; \
+  rename-window source \; \
+  \
+  new-window -n "$DEVICE" \; \
+  send-keys "cd $SOURCE/device/$BRAND/$DEVICE" C-m \; \
+  \
+  new-window -n "common" \; \
+  send-keys "cd $SOURCE/device/$BRAND/$COMMON-common" C-m \; \
+  \
+  new-window -n "kernel" \; \
+  send-keys "cd $SOURCE/kernel/$BRAND/$COMMON" C-m \; \
+  \
+  new-window -n "vendor" \; \
+  send-keys "cd $SOURCE/vendor/$BRAND" C-m \; \
+  \
+  select-window -t 0 \;
