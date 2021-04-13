@@ -12,7 +12,7 @@ read -r zsh
 case $release in
 "Arch Linux" | "Artix Linux" | "Manjaro Linux")
 
-	packages="adwaita-icon-theme feh gnome-themes-extra lxappearance otf-font-awesome papirus-icon-theme picom playerctl ponymix pulseaudio rxvt-unicode scrot urxvt-perls xorg-xbacklight"
+	packages="adwaita-icon-theme feh gnome-themes-extra lxappearance otf-font-awesome papirus-icon-theme playerctl ponymix pulseaudio rxvt-unicode scrot urxvt-perls xorg-xbacklight"
 
 	[ ! "$zsh" = "y" ] || packages+=" zsh zsh-theme-powerlevel10k"
 
@@ -20,7 +20,7 @@ case $release in
 	sudo pacman -S $packages
 
 	echo -e "\n$($cyan)// Installing AUR packages$($reset)\n"
-	aur_packages="urxvt-resize-font-git ttf-meslo"
+	aur_packages="picom-ibhagwan-git urxvt-resize-font-git ttf-meslo"
 	aur_dependencies="base-devel git"
 
 	echo -e "\n$($cyan)Installing dependencies for building $($yellow) AUR packages $($reset)\n"
