@@ -35,7 +35,7 @@ case $release in
 		rm -rf .build
 	done
 
-	git_packages="dwm dwmblocks"
+	git_packages="dwm dwmblocks st"
 
 	echo -e "\n$($cyan)// Cloning & Building $($yellow)git packages$($reset)\n"
 	for git_package in $git_packages; do
