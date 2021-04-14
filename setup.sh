@@ -52,8 +52,8 @@ case $release in
 esac
 
 backup_list=(.p10k.zsh .profile .vimrc .Xresources .zshrc)
-symlink_list=(.config/git .config/picom .config/yay .fonts/Material-Icons .fonts/MesloLGS-NF .local/bin .local/share/dwm .p10k.zsh .profile .vimrc .Xresources)
-dir_list=(.fonts .config .local/share Pictures/Screenshots)
+symlink_list=(.config/git .config/picom .config/yay .local/bin .local/share/dwm .local/share/fonts .p10k.zsh .profile .vimrc .Xresources)
+dir_list=(.config .local/share Pictures/Screenshots)
 
 if [ "$zsh" = "y" ]; then
 	symlink_list+=(" .zshrc")
