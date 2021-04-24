@@ -43,7 +43,10 @@ case $release in
 		rm -rf ~/.local/src/"$git_package"
 		git clone https://github.com/merothh/"$git_package" ~/.local/src/"$git_package"
 		pushd ~/.local/src/"$git_package" 1>/dev/null && sudo make install
-		popd 1>/dev/null || ( echo "popd: failed"; exit)
+		popd 1>/dev/null || (
+			echo "popd: failed"
+			exit
+		)
 	done
 	;;
 *)
