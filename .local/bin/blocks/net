@@ -1,12 +1,18 @@
-STATE=/sys/class/net/w*/operstate
+INTERFACE=$(nmcli | head -1 | cut -d : -f 1)
+STATE=/sys/class/net/$INTERFACE/operstate
 
 case "$(cat $STATE)" in
 up)
-	GLYPH=""
-	SSID=$(nmcli d wifi show | sed -rn 's/^SSID: ()/\1/p')
+	if [[ "$INTERFACE" == "w"* ]]; then
+		GLYPH=""
+		SSID=$(nmcli d wifi show | sed -rn 's/^SSID: ()/\1/p')
+	elif [[ "$INTERFACE" == "e"* ]]; then
+		GLYPH=""
+		SSID="$INTERFACE"
+	fi
 	;;
 down)
-	GLYPH=""
+	GLYPH=" / "
 	SSID="..."
 	;;
 esac
