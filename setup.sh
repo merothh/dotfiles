@@ -12,7 +12,7 @@ read -r zsh
 case $release in
 "Arch Linux" | "Artix Linux" | "Manjaro Linux")
 
-	packages="adwaita-icon-theme feh gnome-themes-extra lxappearance otf-font-awesome papirus-icon-theme playerctl ponymix pulseaudio rxvt-unicode scrot urxvt-perls xorg-xbacklight"
+	packages="adwaita-icon-theme feh gnome-themes-extra lxappearance otf-font-awesome papirus-icon-theme playerctl ponymix pulseaudio rxvt-unicode scrot ttf-liberation urxvt-perls xorg-xbacklight"
 
 	[ ! "$zsh" = "y" ] || packages+=" zsh zsh-theme-powerlevel10k"
 
